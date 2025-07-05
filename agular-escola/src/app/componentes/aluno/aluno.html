@@ -1,17 +1,24 @@
 <div>
-    <img src="../../../assets/imagens/prefil.avif" alt="Perfil">
-    <h2>Andrei</h2>
+<div class="card"></div>
+
+<img src="../../../assets/imagens/prefil.avif" alt="Perfil">
+
+    <h2>{{ aluno.nome }}</h2>
 
     <p>
-        <strong>Curso:</strong> 
+        <strong>Matrícula</strong> {{ aluno.matricula }}
     </p>
 
     <p>
-        <strong>Matricula:</strong> {{ aluno.matricula }}
+        <strong>Cursos:</strong> {{ aluno.cursos }}
     </p>
 
     <p>
-        <strong>Email:</strong> {{ aluno.email }}
+        <strong>Email</strong> {{ aluno.email }}
     </p>
+
+    <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
+        <p>Aluno {{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</p>
+    </div>
 
 </div>

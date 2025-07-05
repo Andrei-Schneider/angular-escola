@@ -10,7 +10,7 @@ import { AlunoInterface } from './interfaces/AlunoInterface';
 export class App {
   protected title = 'agular-escola';
 
-  exibicao: string = 'lista';
+  exibicao: string = 'cards';
 
   listaAlunos: AlunoInterface[] = [
     {
@@ -30,4 +30,14 @@ export class App {
     }
   ];
 
+  alterarExibicao(): void {
+    //Implementar regra da função
+    
+    if (this.exibicao == 'cards') {
+    this.exibicao = 'lista'
+  } else if(this.exibicao == 'lista') {
+    this.exibicao = 'cards'
+  }
+
+}
 }
