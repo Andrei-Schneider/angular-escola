@@ -3,33 +3,16 @@
         <tr>
             <th>Matricula</th>
             <th>Nome</th>
-            <th>E-mail</th>
-            <th>Curso</th>
-            <th>Status</th>
+            <th>Email</th>
+            <th>Cadastro</th>
+            <th>Cursos</th>
         </tr>
         <tr *ngFor="let aluno of lista">
             <td>{{ aluno.matricula }}</td>
             <td>{{ aluno.nome }}</td>
             <td>{{ aluno.email }}</td>
-            <td>{{ aluno.cadastro == true ? 'Aprovado' : "Não Aprovado"}}</td>
+            <td>{{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</td>
             <td>{{ aluno.cursos }}</td>
-
-        </tr>
-        <tr *ngFor="let aluno of lista">
-            <td>{{ aluno.matricula }}</td>
-            <td>{{ aluno.nome }}</td>
-            <td>{{ aluno.email }}</td>
-            <td>{{ aluno.cadastro == true ? 'Aprovado' : "Não Aprovado"}}</td>
-            <td>{{ aluno.cursos }}</td>
-
-        </tr>
-        <tr *ngFor="let aluno of lista">
-            <td>{{ aluno.matricula }}</td>
-            <td>{{ aluno.nome }}</td>
-            <td>{{ aluno.email }}</td>
-            <td>{{ aluno.cadastro == true ? 'Aprovado' : "Não Aprovado"}}</td>
-            <td>{{ aluno.cursos }}</td>
-
         </tr>
     </table>
 </div>

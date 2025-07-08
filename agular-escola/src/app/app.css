@@ -1,38 +1,8 @@
 header, footer {
-background-color: rgb(0, 0, 191);
-color: white;
-padding: 10px;
-text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-.botoes {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-
-}
-
-.botoes button {
     background-color: #13134b;
-    color: white;
-    border-radius: 5px;
-    padding: 8px 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.botoes button:hover {
-    background-color: #ef6205;
-}
-
-.cards, .lista {
-    display: flex;
-    justify-content: center;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
 }
 
 main {
@@ -41,8 +11,27 @@ main {
     flex-direction: column;
 }
 
+.cards, .lista {
+    display: flex;
+    justify-content: center;
+}
 
-footer {
-    margin-top: 20px;
-    font-size: 15px;
+.botoes div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botoes button {
+    background-color: #13134b;
+    color: #FFF;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.botoes button:hover {
+    background-color: #ef6205;
 }

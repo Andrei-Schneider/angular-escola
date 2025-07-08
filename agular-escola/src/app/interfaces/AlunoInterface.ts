@@ -3,7 +3,7 @@ export interface AlunoInterface {
     nome: string;
     email: string;
     cadastro: boolean;
-    cursos: string[
-        
-    ];
+    cursos: string[];
+    imagem: string;
+    notas: number[];
 }

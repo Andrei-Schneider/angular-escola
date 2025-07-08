@@ -8,36 +8,95 @@ import { AlunoInterface } from './interfaces/AlunoInterface';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'agular-escola';
+  protected title = 'meu-primeiro-projeto';
 
-  exibicao: string = 'cards';
+  exibicao: string = 'lista';
+  exibirAprov: string = 'cards';
 
   listaAlunos: AlunoInterface[] = [
     {
-      matricula: 231,
+      matricula: 111,
       nome: 'João',
-      email: 'joaopeteca@gmail.com',
+      email: 'harry@proway.com',
       cadastro: false,
-      cursos: ['Javascript', 'HTML', 'CSS']
+      cursos: ['Javascript', 'HTML', 'CSS'],
+      imagem: 'assets/imagens/Ronaldo.png',
+      notas: []
     },
-
     {
-      matricula: 7643,
-      nome: 'Spezia',
-      email: 'spezia@gmail.com',
+      matricula: 222,
+      nome: 'Gustavinho',
+      email: 'hermione@proway.com',
       cadastro: true,
-      cursos: ['Java', 'Postgres']
+      cursos: ['Java', 'Postgres'],
+      imagem: 'assets/imagens/Gato.png',
+      notas: []
+    },
+    {
+      matricula: 333,
+      nome: 'Arnoldo',
+      email: 'rony@proway.com',
+      cadastro: false,
+      cursos: ['Python', 'Oracle'],
+      imagem: 'assets/imagens/coelho.png',
+      notas: []
+    },
+    {
+      matricula: 444,
+      nome: 'Silvo',
+      email: 'bob@proway.com',
+      cadastro: true,
+      cursos: ['C++', 'PLSQL'],
+      imagem: 'assets/imagens/Gato2.png',
+      notas: []
     }
   ];
 
+  listaFiltro: AlunoInterface[] = this.listaAlunos;
+
   alterarExibicao(): void {
-    //Implementar regra da função
-    
     if (this.exibicao == 'cards') {
-    this.exibicao = 'lista'
-  } else if(this.exibicao == 'lista') {
-    this.exibicao = 'cards'
+      this.exibicao = 'lista';
+    } else if (this.exibicao == 'lista') {
+      this.exibicao = 'cards';
+    }
   }
 
-}
+  filtrarAprovados(): void {
+
+    this.listaFiltro = [];
+
+    this.listaAlunos.forEach(aluno => {
+      if (aluno.cadastro == true) {
+        this.listaFiltro.push(aluno);
+
+      }
+    });
+
+  }
+
+  filtrarReprovados(): void {
+
+    this.listaFiltro = [];
+    this.listaFiltro = this.listaAlunos.filter(aluno => {
+      return aluno.cadastro == false;
+    })
+
+  }
+
+  exibirTodos(): void {
+    this.listaFiltro = this.listaAlunos;
+  }
+
+  //Resumindo todas as funções acima
+  filtrarAlunos(filtro: string) {
+    if (filtro == 'aprovados') {
+      this.listaFiltro = this.listaAlunos.filter(aluno => { aluno.cadastro == true });
+    } else if (filtro == 'reprovados') {
+      this.listaFiltro = this.listaAlunos.filter(aluno => { aluno.cadastro == false });
+    } else if (filtro == 'todos') {
+      this.listaFiltro = this.listaAlunos;
+    }
+  }
+
 }

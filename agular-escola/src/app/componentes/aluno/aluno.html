@@ -1,7 +1,6 @@
-<div>
-<div class="card"></div>
+<div class="card">
 
-<img src="../../../assets/imagens/prefil.avif" alt="Perfil">
+    <img [src]="aluno.imagem" alt="">
 
     <h2>{{ aluno.nome }}</h2>
 
@@ -17,8 +16,12 @@
         <strong>Email</strong> {{ aluno.email }}
     </p>
 
+    <p>
+        <strong>Média</strong> Calcular a media
+    </p>
+
     <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
-        <p>Aluno {{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</p>
+        <p>Aluno {{ aluno.cadastro == true ? 'Aprovado' : 'Reprovado' }}</p> 
     </div>
 
 </div>

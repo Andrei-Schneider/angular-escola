@@ -7,13 +7,13 @@ table, tr {
 }
 
 th {
-    background-color: darkorange;
-    color: white;
+    background-color: #ef6205;
+    color: #FFF;
     text-align: left;
 }
 
-td {
-    color: #464646;
+tr {
+    color: #383737;
 }
 
 th, td {
@@ -30,6 +30,5 @@ table tr:nth-child(odd) {
 
 table tr:hover {
     background-color: #1c076e;
-    color: white;
+    color: #FFF;
 }
-

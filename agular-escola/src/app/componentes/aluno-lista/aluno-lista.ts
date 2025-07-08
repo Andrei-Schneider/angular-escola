@@ -10,5 +10,6 @@ import { AlunoInterface } from '../../interfaces/AlunoInterface';
 export class AlunoLista {
 
   @Input()
-  lista: AlunoInterface[] = []
+  lista: AlunoInterface[] = [];
+
 }
