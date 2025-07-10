@@ -1,5 +1,5 @@
 .lista {
-    width: 800px;
+    width: 1350px;
 }
 
 table, tr {
@@ -10,6 +10,7 @@ th {
     background-color: #ef6205;
     color: #FFF;
     text-align: left;
+  
 }
 
 tr {
@@ -31,4 +32,23 @@ table tr:nth-child(odd) {
 table tr:hover {
     background-color: #1c076e;
     color: #FFF;
+}
+
+.bg-green {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.bg-red {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }

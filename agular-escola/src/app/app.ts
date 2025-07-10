@@ -21,7 +21,7 @@ export class App {
       cadastro: false,
       cursos: ['Javascript', 'HTML', 'CSS'],
       imagem: 'assets/imagens/Ronaldo.png',
-      notas: []
+      notas: [9,4,5]
     },
     {
       matricula: 222,
@@ -30,7 +30,7 @@ export class App {
       cadastro: true,
       cursos: ['Java', 'Postgres'],
       imagem: 'assets/imagens/Gato.png',
-      notas: []
+      notas: [5,7,3]
     },
     {
       matricula: 333,
@@ -39,7 +39,7 @@ export class App {
       cadastro: false,
       cursos: ['Python', 'Oracle'],
       imagem: 'assets/imagens/coelho.png',
-      notas: []
+      notas: [7,4,5]
     },
     {
       matricula: 444,
@@ -48,7 +48,7 @@ export class App {
       cadastro: true,
       cursos: ['C++', 'PLSQL'],
       imagem: 'assets/imagens/Gato2.png',
-      notas: []
+      notas: [2,2,2]
     }
   ];
 
@@ -97,6 +97,19 @@ export class App {
     } else if (filtro == 'todos') {
       this.listaFiltro = this.listaAlunos;
     }
+  }
+
+  onExcluir(matricula: number): void {
+    alert(`Teste componente Mãe: ${matricula}`);
+
+    //Percorer a lista de alunos
+    this.listaAlunos.forEach( (aluno, index) => {
+      //Encontrar o aluno com a matricula igual a do paramêtro recebido
+      if (aluno.matricula == matricula) {
+        //remover o alno da lista
+        this.listaAlunos.splice(index, 1);
+      }
+    });
   }
 
 }
